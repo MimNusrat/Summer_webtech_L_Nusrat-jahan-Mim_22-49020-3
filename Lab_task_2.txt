@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Dhaka</title>
+</head>
+<body>
+<h2>Dhaka</h2>
+<p>Something about dhaka.</p>
+<ol>
+   <li>a</li>
+    <li>b</li>
+</ol>
+<ul>
+    <li>a</li>
+    <li>b</li>
+</ul>
+<a href="https://en.wikipedia.org/wiki/Dhaka">dhaka</a>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Roll</th>
+    </tr>
+
+    <tr>
+        <td>abc</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td><a  href="https://en.wikipedia.org/wiki/Dhaka">def</a></td>
+        <td>2</td>
+    </tr>
+</table>
+
+<img src="blue.jpg" width="50px" height="50px">
+
+
+<a href="https://en.wikipedia.org/wiki/Dhaka"><img src="blue.jpg" width="50px" height="50px"></a>
+
+
+
+<form  method="get">
+
+    <label for="firstname">First name</label>
+    <input name="firstname" id="firstname" type="text">
+    <br>
+    <label for="lastname">Last name</label>
+    <br>
+        <input name="lastname" id="lastname" type="text">
+
+    <label for="emailaddress">Email</label>
+    <input name="email" id="emailaddress" type="email">
+
+    <label for="number">Number</label>
+    <input name="number" id="number" type="number">
+
+    <label for="teliphone">Phone</label>
+    <input name="phone" id="teliphone" type="tel">
+
+<br>
+
+
+    <label for="option A">Option A</label>
+    <input name="opt" id="option A" type="radio">
+
+    <label for="option B">Option B</label>
+    <input name="opt" id="option B" type="radio">
+
+    <label for="option C">Option C</label>
+    <input name="opt" id="option C" type="radio">
+
+
+<select name="dropdownmenu">
+    <option value="one">one</option>
+    <option value="two">two</option>
+    <option value="three">three</option>
+</select>
+
+<input type="submit">
+<input type="reset">
+
+</form>
+
+</body>
+</html>
