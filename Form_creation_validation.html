@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Form creation and validation</title>
+  <style>
+   /* center */
+    body {
+      font-family: Arial;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f2f2f2;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ccc;;
+      //border-radius: 12px;
+      width: 300px;
+      margin-bottom: 10px;
+    }
+
+    input, select {
+      width: 90%;
+      padding: 8px;
+      margin-bottom: 12px;
+      border: 1px solid #aaa;
+     
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #0056b3;
+      color: white;
+      border: none;
+     
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #008080;
+    }
+
+    #image-container {
+      margin-top: 20px;
+    }
+
+    img {
+      width: 300px;
+      outline: 4px solid #333;
+      outline-offset: 10px;
+     // border-radius: 10px;
+      display: none;
+    }
+
+    .image-buttons {
+      margin-top: 10px;
+    }
+
+    .image-buttons button {
+      width: 140px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="myForm">
+    <h2>Course Registration</h2>
+    <input type="text" id="fullName" placeholder="Full Name">
+    <input type="email" id="email" placeholder="Email">
+    <input type="number" id="age" placeholder="Age">
+    
+	<select id="course">
+      <option value="select">Select Course</option>
+      <option value="HTML">HTML</option>
+      <option value="CSS">CSS</option>
+      <option value="JS">JavaScript</option>
+	  <option value="WEB">WebTech</option>
+    </select>
+	
+	
+    <button type="submit">Submit</button>
+  </form>
+
+  <div class="image-buttons">
+    <button onclick="show()">Show Image</button>
+    <button onclick="hide()">Hide Image</button>
+  </div>
+  <div id="image-container">
+    <img id="myImage" src="MainBefore.jpg" alt="Sample Image">
+  </div>
+
+  <script>
+      document.getElementById("myForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // Prevent form submission
+
+      const name = document.getElementById("fullName").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const age = parseInt(document.getElementById("age").value);
+
+      if (name.length < 3) {
+        alert("Full name must be at least 3 characters.");
+        return;
+      }
+
+      if (!email.includes("@") || !email.includes(".")) {
+        alert("Please enter a valid email.");
+        return;
+      }
+
+      if (isNaN(age) || age < 10 || age > 100) {
+        alert("Age must be a number between 10 and 100.");
+        return;
+      }
+
+      alert("Form submitted successfully!");
+    });
+
+    // Image Show/Hide Functions
+    function show() {
+      document.getElementById("myImage").style.display = "block";
+    }
+
+    function hide() {
+      document.getElementById("myImage").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
